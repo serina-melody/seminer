@@ -888,6 +888,151 @@
             </table>
         </div>
     </section>
+
+    <!-- Trainers Section -->
+<section class="trainers">
+    <div class="container">
+        <h2>エンパワーメントのガイド役</h2>
+        <div class="trainer-cards">
+            <div class="trainer-card">
+                <div class="trainer-image">
+                    <img src="/api/placeholder/300/300" alt="伊藤 亮">
+                </div>
+                <div class="trainer-info">
+                    <h3 class="trainer-name">伊藤 亮</h3>
+                    <p class="trainer-title">マインドバンク代表 / 経営企画室 室長</p>
+                    <p class="trainer-bio">1987年生まれ。神奈川県出身。北海道大学水産学部卒業。留学経験を持ち、自転車で北海道〜西の旅を満喫。約8000人との人の出会いを通して、人には「能力的な成長」と「意識の変容」の2つがあることを痛感し、古代の叡智である「老子道徳経」の探求に没頭。</p>
+                </div>
+            </div>
+            
+            <div class="trainer-card">
+                <div class="trainer-image">
+                    <img src="/api/placeholder/300/300" alt="田口 良子">
+                </div>
+                <div class="trainer-info">
+                    <h3 class="trainer-name">田口 良子</h3>
+                    <p class="trainer-title">マインドバンクトレーナー / 対話の木の実ファシリテーター</p>
+                    <p class="trainer-bio">1978年生まれ。神奈川県出身。「どんな声や感情も含めたものとして大切にする」という対話の在り方を目指し、対話の学びと気づきの道を模索している。クライアントの中の前向いエネルギーが立ち上がり、人生が動き出す気づきの瞬間を生み出すサポートをしている。</p>
+                </div>
+            </div>
+            
+            <div class="trainer-card">
+                <div class="trainer-image">
+                    <img src="/api/placeholder/300/300" alt="佐久本 万里子">
+                </div>
+                <div class="trainer-info">
+                    <h3 class="trainer-name">佐久本 万里子</h3>
+                    <p class="trainer-title">マインドバンクトレーナー / マインドフルネス担当</p>
+                    <p class="trainer-bio">1981年生まれ。沖縄県出身。カンザス留学中に重く辛い境遇に遭遇する。導かれるように出会った瞑想やマインドフルネスに救われた経験から現在マインドフルネスの実践と習慣化を通して、一人ひとりの幸福感と幸福度向上に集点を当てた活動をしている。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* Trainers Section スタイル */
+    .trainers {
+        padding: 80px 0;
+        background-color: #ffffff;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    h2 {
+        font-size: 32px;
+        margin-bottom: 30px;
+        color: #1e50a2;
+        text-align: center;
+        position: relative;
+    }
+    
+    h2:after {
+        content: '';
+        display: block;
+        width: 80px;
+        height: 3px;
+        background: #ffd700;
+        margin: 15px auto;
+    }
+    
+    .trainer-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .trainer-card {
+        flex: 0 0 calc(33.333% - 30px);
+        min-width: 300px;
+        background-color: #e6f2ff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .trainer-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    }
+    
+    .trainer-image {
+        height: 250px;
+        overflow: hidden;
+    }
+    
+    .trainer-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.5s ease;
+    }
+    
+    .trainer-card:hover .trainer-image img {
+        transform: scale(1.05);
+    }
+    
+    .trainer-info {
+        padding: 20px;
+    }
+    
+    .trainer-name {
+        font-size: 20px;
+        font-weight: bold;
+        color: #1e50a2;
+        margin-bottom: 5px;
+        border-bottom: 2px solid #ffd700;
+        padding-bottom: 5px;
+        display: inline-block;
+    }
+    
+    .trainer-title {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 15px;
+    }
+    
+    .trainer-bio {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    
+    /* レスポンシブデザイン */
+    @media (max-width: 768px) {
+        .trainer-card {
+            flex: 0 0 100%;
+        }
+    }
+</style>
     
     <!-- Testimonials -->
     <section class="testimonials">
