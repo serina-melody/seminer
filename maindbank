@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>エンパワーメントリーダーシップ研修 | MINDBANK</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-blue: #1e50a2;
+            --secondary-blue: #4682b4;
+            --accent-yellow: #ffd700;
+            --light-blue: #e6f2ff;
+            --dark-blue: #0d326b;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
+            --text-dark: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 60px 0;
+        }
+        
+        h2 {
+            font-size: 32px;
+            margin-bottom: 30px;
+            color: var(--primary-blue);
+            text-align: center;
+            position: relative;
+        }
+        
+        h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: var(--accent-yellow);
+            margin: 15px auto;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: var(--white);
+            padding: 20px 0;
+            position: relative;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .contact-button {
+            display: inline-block;
+            background-color: var(--accent-yellow);
+            color: var(--text-dark);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-button:hover {
+            background-color: #ffea00;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        /* Hero Section */
+        .hero {
+            position: relative;
+            background: linear-gradient(rgba(30, 80, 162, 0.85), rgba(30, 80, 162, 0.85)), url('/api/placeholder/1200/600') no-repeat center center;
+            background-size: cover;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 46px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero h1 span {
+            display: block;
+            font-size: 80px;
+            color: var(--accent-yellow);
+            margin: 15px 0;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+        
+        .hero-cta {
+            display: inline-block;
+            background-color: var(--accent-yellow);
+            color: var(--text-dark);
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        
+        .hero-cta:hover {
+            background-color: #ffea00;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        /* Stats Section */
+        .stats {
+            background-color: var(--light-blue);
+            padding: 40px 0;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+        
+        .stat-item {
+            flex: 1;
+            min-width: 200px;
+            margin: 20px;
+            position: relative;
+        }
+        
+        .stat-circle {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background-color: var(--primary-blue);
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 15px;
+        }
+        
+        .stat-number {
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 1;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+        }
+        
+        .stat-description {
+            font-size: 15px;
+        }
+        
+        /* What is Empowerment */
+        .empowerment-def {
+            background-color: var(--white);
+            padding: 60px 0;
+        }
+        
+        .emp-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .emp-text {
+            flex: 1;
+            padding: 30px;
+            background-color: var(--light-blue);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .emp-title {
+            color: var(--primary-blue);
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .emp-description {
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        
+        .emp-icon {
+            flex: 0 0 200px;
+            text-align: center;
+        }
+        
+        /* Five Powers Section */
+        .five-powers {
+            background: linear-gradient(to right, var(--primary-blue), var(--secondary-blue));
+            color: var(--white);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .powers-container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .powers-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+        }
+        
+        .powers-intro h2 {
+            color: var(--white);
+        }
+        
+        .powers-intro h2:after {
+            background: var(--accent-yellow);
+        }
+        
+        .powers-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+        }
+        
+        .power-item {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 30px;
+            flex: 0 0 calc(33.333% - 30px);
+            min-width: 300px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            color: var(--text-dark);
+        }
+        
+        .power-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .power-icon {
+            margin-bottom: 15px;
+        }
+        
+        .noimage-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--primary-blue);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            font-weight: bold;
+            margin: 0 auto;
+        }
+        
+        .power-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: var(--primary-blue);
+        }
+        
+        /* Comparison Section */
+        .comparison {
+            background-color: var(--white);
+            padding: 80px 0;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+            border-collapse: collapse;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .comparison-table th {
+            background-color: var(--primary-blue);
+            color: var(--white);
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+        }
+        
+        .comparison-table th:first-child {
+            background-color: var(--dark-blue);
+        }
+        
+        .comparison-table td {
+            padding: 15px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .comparison-table td:first-child {
+            font-weight: bold;
+            background-color: var(--light-gray);
+            text-align: left;
+        }
+        
+        .highlight-cell {
+            background-color: rgba(255, 215, 0, 0.1);
+            font-weight: bold;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--light-blue);
+            padding: 80px 0;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .testimonial-header {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--primary-blue);
+            margin-bottom: 15px;
+            border-left: 4px solid var(--accent-yellow);
+            padding-left: 10px;
+        }
+        
+        .testimonial-content {
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-author {
+            font-size: 14px;
+            color: #777;
+            text-align: right;
+        }
+        
+        /* Trainers Section */
+        .trainers {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+        
+        .trainer-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .trainer-card {
+            flex: 0 0 calc(33.333% - 30px);
+            min-width: 300px;
+            background-color: var(--light-blue);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .trainer-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .trainer-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .trainer-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .trainer-card:hover .trainer-image img {
+            transform: scale(1.05);
+        }
+        
+        .trainer-info {
+            padding: 20px;
+        }
+        
+        .trainer-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primary-blue);
+            margin-bottom: 5px;
+            border-bottom: 2px solid var(--accent-yellow);
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+        
+        .trainer-title {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .trainer-bio {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(rgba(30, 80, 162, 0.9), rgba(30, 80, 162, 0.9)), url('/api/placeholder/1200/600') no-repeat center center;
+            background-size: cover;
+            color: var(--white);
+            padding: 80px 0;
+            text-align: center;
+        }
+        
+        .cta-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cta-title {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .cta-subtitle {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .cta-primary {
+            display: inline-block;
+            background-color: var(--accent-yellow);
+            color: var(--text-dark);
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-primary:hover {
+            background-color: #ffea00;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        .cta-secondary {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--white);
+            padding: 14px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            border: 2px solid var(--white);
+            transition: all 0.3s ease;
+        }
+        
+        .cta-secondary:hover {
+            background-color: var(--white);
+            color: var(--primary-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-blue);
+            color: var(--white);
+            padding: 40px 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-info {
+            flex: 1;
+            min-width: 300px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        
+        .footer-contact {
+            margin-top: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .contact-icon {
+            margin-right: 10px;
+            color: var(--accent-yellow);
+        }
+        
+        .footer-links {
+            flex: 1;
+            min-width: 300px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer-links a {
+            color: var(--white);
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent-yellow);
+            padding-left: 5px;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            margin-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        
+        .social-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--accent-yellow);
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+            
+            .hero h1 span {
+                font-size: 60px;
+            }
+            
+            .hero-subtitle {
+                font-size: 20px;
+            }
+            
+            .power-item {
+                flex: 0 0 calc(50% - 30px);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 80px 0;
+            }
+            
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .hero h1 span {
+                font-size: 48px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .emp-container {
+                flex-direction: column;
+            }
+            
+            .emp-icon {
+                margin-bottom: 30px;
+            }
+            
+            .power-item {
+                flex: 0 0 100%;
+            }
+            
+            .trainer-card {
+                flex: 0 0 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .hero h1 span {
+                font-size: 36px;
+            }
+            
+            .hero-subtitle {
+                font-size: 16px;
+            }
+            
+            .stat-circle {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .stat-number {
+                font-size: 28px;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">MINDBANK</div>
+            <a href="#contact" class="contact-button">お問い合わせ</a>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>これからのリーダーに必要な<span>5</span>つの力を磨く体験学習プログラム</h1>
+            <p class="hero-subtitle">観る力・感じる力・聞く力・明かす力・問う力</p>
+            <a href="#contact" class="hero-cta">研修プログラムの詳細を見る</a>
+        </div>
+    </section>
+    
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-container">
+                <div class="stat-item">
+                    <div class="stat-circle">
+                        <div class="stat-number">17</div>
+                        <div class="stat-label">回</div>
+                    </div>
+                    <p class="stat-description">開催数</p>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-circle">
+                        <div class="stat-number">178</div>
+                        <div class="stat-label">名</div>
+                    </div>
+                    <p class="stat-description">受講者数</p>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-circle">
+                        <div class="stat-number">94</div>
+                        <div class="stat-label">%</div>
+                    </div>
+                    <p class="stat-description">変化実感度</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- What is Empowerment -->
+    <section class="empowerment-def">
+        <div class="container">
+            <h2>エンパワーメントとは？</h2>
+            <div class="emp-container">
+                <div class="emp-icon">
+                    <img src="/api/placeholder/200/200" alt="エンパワーメント" />
+                </div>
+                <div class="emp-text">
+                    <h3 class="emp-title">自分の中にあるものを自覚することで内発的に動機付いている状態のこと</h3>
+                    <p class="emp-description">エンパワーメントリーダーシップとは、メンバーをエンパワーすることで、新たなリーダーシップを創造し、組織の可能性を最大化させていくリーダーのことです。そのためには、自分を知り、自分自身をエンパワーすることが最初の、そして、最も大切なリーダーの仕事です。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Five Powers Section -->
+    <section class="five-powers">
+        <div class="container powers-container">
+            <div class="powers-intro">
+                <h2>5つの力を磨く研修内容</h2>
+                <p>講義に加えて、ワークやトレーニングも取り入れ体験的に学んでいきます</p>
+            </div>
+            <div class="powers-grid">
+                <div class="power-item">
+                    <div class="power-icon">
+                        <div class="noimage-icon">観</div>
+                    </div>
+                    <h3 class="power-title">観る力</h3>
+                    <p>反射/反応の仕組み、内省の手順とフレーム、ビリーフの意識化</p>
+                </div>
+                
+                <div class="power-item">
+                    <div class="power-icon">
+                        <div class="noimage-icon">感</div>
+                    </div>
+                    <h3 class="power-title">感じる力</h3>
+                    <p>受容のワーク、マインドフルネス、不快感情の扱い方、不安/不安の理解</p>
+                </div>
+                
+                <div class="power-item">
+                    <div class="power-icon">
+                        <div class="noimage-icon">聴</div>
+                    </div>
+                    <h3 class="power-title">聴く力</h3>
+                    <p>変化を促進する聴き方、聴くためのスキル、エンパワーが起こる仕組み、自己共感と他者共感</p>
+                </div>
+                
+                <div class="power-item">
+                    <div class="power-icon">
+                        <div class="noimage-icon">明</div>
+                    </div>
+                    <h3 class="power-title">明かす力</h3>
+                    <p>リクエストの仕方、対話の心得</p>
+                </div>
+                
+                <div class="power-item">
+                    <div class="power-icon">
+                        <div class="noimage-icon">問</div>
+                    </div>
+                    <h3 class="power-title">問う力</h3>
+                    <p>1on1の原則と手法、内省を促す問い</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Comparison Section -->
+    <section class="comparison">
+        <div class="container">
+            <h2>研修の特徴：従来の研修との違い</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>従来の研修</th>
+                        <th>弊社の研修</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>学習法</td>
+                        <td>シングルループ学習</td>
+                        <td class="highlight-cell">ダブルループ学習</td>
+                    </tr>
+                    <tr>
+                        <td>主題</td>
+                        <td>外側から情報を入れる<br>インプット</td>
+                        <td class="highlight-cell">内側から情報を引き出す<br>アウトプット</td>
+                    </tr>
+                    <tr>
+                        <td>アプローチ</td>
+                        <td>良くない行動を改める<br>反省・改善</td>
+                        <td class="highlight-cell">自己肯定に気づき、手放す<br>内省・共感</td>
+                    </tr>
+                    <tr>
+                        <td>教材</td>
+                        <td>知識・方法論・あるべき論</td>
+                        <td class="highlight-cell">自らの直接体験</td>
+                    </tr>
+                    <tr>
+                        <td>学習持続性</td>
+                        <td>外発的なので一時的</td>
+                        <td class="highlight-cell">内発的なので半永久的</td>
+                    </tr>
+                    <tr>
+                        <td>学習領域</td>
+                        <td>頭での学習・記憶・分析</td>
+                        <td class="highlight-cell">体験する・感じる・理解する</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+    
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>受講者の声</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <h3 class="testimonial-header">深い自己理解が得られました</h3>
+                    <p class="testimonial-content">自分がいかに恐れから動いているかがわかりました。それを自覚できたことで行動を選択する意識が高まりました。</p>
+                    <p class="testimonial-author">（医療業 30代 マネジャー）</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <h3 class="testimonial-header">メンバーの行動量がアップしました</h3>
+                    <p class="testimonial-content">目に見えて行動量が変わり、エンパワーすることのすごさを実感しています。</p>
+                    <p class="testimonial-author">（人材サービス業 30代 マネジャー）</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <h3 class="testimonial-header">社員の定着率が上がりました</h3>
+                    <p class="testimonial-content">メンバーが何を考えているのかがわかりずらいましたが、聴くようになったことで、相談の数が格段に増え、本音で会話できるようになりました。</p>
+                    <p class="testimonial-author">（製造業 40代 部長職）</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <h3 class="testimonial-header">関係性が変わり、毎日が充実しています</h3>
+                    <p class="testimonial-content">「人は変えられないが、変わりたいと思っている」という言葉にハッとしました。人の変わりたいという想いに寄り添う聴き方を意識するようになったおかげで、人間関係が豊かになっています。</p>
+                    <p class="testimonial-author">（卸売業 40代 執行役員）</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <h3 class="testimonial-header">創造的なアイデアが出るようになりました</h3>
+                    <p class="testimonial-content">双方の満たしたいこと明確にした後に、それらを同時に満たせる手段を考えることで斬新な意見が飛び交うようになりました。</p>
+                    <p class="testimonial-author">（サービス業 30代 管理職）</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <h3 class="testimonial-header">課題の本質がわかりました</h3>
+                    <p class="testimonial-content">組織の変化を自分が止めていたことを受け止めるのはとても苦しかったのですが、同時に視界しが開けてスッキリしました。</p>
+                    <p class="testimonial-author">（建築業 50代 経営者）</p>
+                </div>
